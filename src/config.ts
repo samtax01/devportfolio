@@ -35,7 +35,7 @@ export type DevPortfolioSiteConfig = {
 }
 
 // Normalized input that templates can depend on
-import type { TemplateInput } from '../../_shared/types'
+import type {TemplateInput} from '../../_shared/types'
 
 export const DEFAULT_ACCENT = '#1d4ed8'
 
