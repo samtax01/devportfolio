@@ -1,5 +1,5 @@
 ---
-import { siteConfig } from "../config";
+const { siteConfig } = Astro.props as { siteConfig: import('../config').DevPortfolioSiteConfig };
 const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 ---
 

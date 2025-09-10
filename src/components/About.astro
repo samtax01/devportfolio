@@ -1,5 +1,5 @@
 ---
-import { siteConfig } from "../config";
+const { siteConfig } = Astro.props as { siteConfig: import('../config').DevPortfolioSiteConfig };
 ---
 
 <section id="about" class="p-8 sm:p-12 md:p-16 lg:p-24">
@@ -22,6 +22,14 @@ import { siteConfig } from "../config";
         <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-600">
           {siteConfig.aboutMe}
         </p>
+
+        {siteConfig.resumeUrl && (
+          <div class="pt-2">
+            <a href={siteConfig.resumeUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-white" style={`background-color: ${siteConfig.accentColor}`}>
+              <span>View Resume</span>
+            </a>
+          </div>
+        )}
 
         <div class="pt-4">
           <div class="flex flex-wrap gap-3">
